@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        function test_corx() {
+            $.ajax({
+                url: 'http://localhost:8082/test/t1',
+                type: "POST",
+                dataType: "json",
+                xhrFields: {withCredentials: true},
+                crossDomain: true,
+                success: function (data) {
+                    alert("跨域请求配置成功")
+                },
+                error: function (data) {
+                    alert("跨域请求配置失败")
+                }
+            })
+
+
+
+        }
+
+
+    </script>
+</head>
+<body>
+    <div><input type="button" onclick="test_corx()" value="测试跨域"/></div>
+</body>
+</html>
