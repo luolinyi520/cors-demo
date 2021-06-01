@@ -20,8 +20,12 @@ public class GlobalCorsConfig {
         //        httpResponse.setHeader("Access-Control-Allow-Credentials", "true");
 
         CorsConfiguration config = new CorsConfiguration();
-        config.addAllowedOrigin("*");
-//        config.setAllowCredentials(true);
+
+//        config.addAllowedOrigin("*");
+        // springboot 2.4版本之后  https://blog.csdn.net/jxysgzs/article/details/110818712
+        config.addAllowedOriginPattern("*");
+
+        config.setAllowCredentials(true);
         config.addAllowedMethod("*");
         config.addAllowedHeader("*");
         config.addExposedHeader("*");
