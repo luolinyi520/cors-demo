@@ -21,7 +21,7 @@ public class GlobalCorsConfig {
 
         CorsConfiguration config = new CorsConfiguration();
         config.addAllowedOrigin("*");
-        config.setAllowCredentials(true);
+//        config.setAllowCredentials(true);
         config.addAllowedMethod("*");
         config.addAllowedHeader("*");
         config.addExposedHeader("*");
